@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="bat_ball_stump">Bat Ball Stump Game</h1>
+
+    <!--Bat Section-->
+
+    <button onclick="
+    let computerChoice = generateComputerChoice();
+
+    if(computerChoice == 'Bat') {
+        resultMessage = `So, it's a tie`;
+        score.tie++;
+    } else if(computerChoice == 'Ball') {
+        resultMessage = 'So, I have won';
+        score.win++;
+    } else if(computerChoice == 'Stump') {
+        resultMessage = 'So, computer has won';
+        score.lost++;
+    }
+
+    document.querySelector('#user-move').innerText = `You have chosen 'Bat' 
+    and Computer has chosen '${computerChoice}'. ${resultMessage}
+    ${score.displayScore()}`;
+    ">
+    <img src="image/bat.jpg" alt="Bat Image" class="bat_image">
+    </button>
+    
+
+    <!--Ball Section-->
+    <button onclick="
+    computerChoice = generateComputerChoice();
+    
+    if(computerChoice == 'Ball') {
+        resultMessage = `So, it's a tie`;
+        score.tie++;
+    } else if(computerChoice == 'Bat') {
+        resultMessage = 'So, computer has won';
+        score.win++;
+    } else if(computerChoice == 'Stump') {
+        resultMessage = 'So, I have won';
+        score.win++;
+    }
+
+    document.querySelector('#user-move').innerText = `You have chosen 'Ball' 
+    and Computer has chosen '${computerChoice}'. ${resultMessage}
+    ${score.displayScore()}`;
+
+    ">
+    <img src="image/ball.jpg" alt="Bat Image" class="bat_image">
+    </button>
+
+
+    <!--Stump Section-->
+    <button onclick="
+    computerChoice = generateComputerChoice();
+    
+    if(computerChoice == 'Stump') {
+        resultMessage = `So, it's a tie`;
+        score.tie++;
+    } else if(computerChoice == 'Ball') {
+        resultMessage = 'So, computer has won';
+        score.win++;
+    } else if(computerChoice == 'Bat') {
+        resultMessage = 'So, I have won';
+        score.win++;
+    }
+
+    document.querySelector('#user-move').innerText = `You have chosen 'Stump' 
+    and Computer has chosen '${computerChoice}'. ${resultMessage}
+    ${score.displayScore()}`;
+
+    ">
+    <img src="image/stump.jpg" alt="Bat Image" class="bat_image">
+    </button>
+
+    <h3 id="user-move"></h3>
+
+
+<script>
+
+    let score = {
+       win: 0,
+       lost: 0,
+       tie: 0,
+
+       displayScore: function() {
+        return `Won: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}`;
+       }
+    };
+
+    function generateComputerChoice() {
+        let randomNumber = Math.random() * 3;
+    if(randomNumber > 0 && randomNumber <= 1) {
+       return 'Bat';
+    } else if(randomNumber > 1 && randomNumber <= 2) {
+        return 'Ball';
+    } else {
+        return 'Stump';
+    }
+
+    }
+</script>
+</body>
+</html>

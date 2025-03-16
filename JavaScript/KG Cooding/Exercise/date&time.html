@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date & Time</title>
+    <style>
+        #my_button{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="displayScore"></h1>
+
+    <button id="my_button" onclick="buttonPress();">Click me</button>
+    <script>
+        let noOfClick = 0;
+        function buttonPress() {
+            let button = document.querySelector('#my_button');
+            noOfClick++;
+            button.innerText = noOfClick;
+        }
+
+
+
+
+
+
+
+        function doHeading(personName = 'Dear') {
+        let date = new Date();
+
+        let hours = date.getHours();
+        let heading = document.querySelector('#displayScore');
+
+        if(hours > 5 && hours < 12) {
+            heading.innerText = `Good Morning ${personName}`;
+        } else if(hours > 12 && hours < 18) {
+            heading.innerText = `Good Afternoon ${personName}`;
+        } else {
+            heading.innerText = `Good Night ${personName}`;
+        }
+    }
+
+    doHeading('Jahir');
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.bag_button{
+    background-color: rgb(136, 233, 136);
+    border-radius: 10px;
+    padding: 7px 20px 7px 20px;
+}
+.bag_Wishlist{
+    border-radius: 10px;
+    padding: 7px 20px 7px 20px;
+    text-transform: uppercase;
+
+}
+
+.bag_Sale{
+    background-color: rgb(136, 233, 136);
+    border-radius: 10px;
+    padding: 7px 20px 7px 20px;
+}

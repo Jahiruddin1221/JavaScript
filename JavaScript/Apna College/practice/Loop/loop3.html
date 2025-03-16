@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game</title>
+</head>
+<body>
+    <script>
+        let gameNum = 25;
+
+        let userNum = prompt("Guess the number: ");
+        console.log(userNum);
+
+        while(userNum != gameNum) {
+            userNum = prompt("You enter wrong number please enter again: ");
+        }
+
+        console.log("Congratulation, your entered number is right");
+    </script>
+</body>
+</html>

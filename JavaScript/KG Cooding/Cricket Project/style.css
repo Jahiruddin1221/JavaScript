@@ -1,0 +1,13 @@
+body{
+text-align: center;
+}
+
+#bat_ball_stump{
+    font-size: 50px;
+}
+
+.bat_image{
+    width: 90px;
+    height: 100px;
+    cursor: pointer;
+}
